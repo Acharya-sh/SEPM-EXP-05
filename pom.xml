@@ -7,10 +7,10 @@
 
     <groupId>com.example</groupId>
     <artifactId>sepm-exp-5</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <version>1.0</version>
 
-    <name>sepm-exp-5</name>
+    <!-- ✅ VERY IMPORTANT -->
+    <packaging>war</packaging>
 
     <build>
         <finalName>sepm-exp-5</finalName>
