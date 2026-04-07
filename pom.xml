@@ -10,8 +10,6 @@
     <version>1.0</version>
     <packaging>war</packaging>
 
-    <name>SEPM App</name>
-
     <build>
         <finalName>sepm-exp-5</finalName>
 
@@ -20,6 +18,7 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.2</version>
                 <configuration>
+                    <warSourceDirectory>src/main/webapp</warSourceDirectory>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
