@@ -13,6 +13,16 @@
     <build>
         <finalName>sepm-exp-5</finalName>
 
+        <!-- THIS IS THE FIX -->
+        <resources>
+            <resource>
+                <directory>src/main/webapp</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+        </resources>
+
         <plugins>
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
