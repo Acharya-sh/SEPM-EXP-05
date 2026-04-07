@@ -10,28 +10,40 @@
     <version>1.0</version>
     <packaging>war</packaging>
 
-    <name>SEPM Web App</name>
-
     <build>
         <finalName>sepm-exp-5</finalName>
 
-        <!-- IMPORTANT FIX -->
+        <!-- FORCE INCLUDE FILES -->
         <resources>
             <resource>
                 <directory>src/main/webapp</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
             </resource>
         </resources>
 
         <plugins>
 
-            <!-- THIS FIXES EMPTY WAR -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.2</version>
+
                 <configuration>
                     <warSourceDirectory>src/main/webapp</warSourceDirectory>
-                    <attachClasses>true</attachClasses>
+
+                    <!-- THIS IS THE KEY FIX -->
+                    <webResources>
+                        <resource>
+                            <directory>src/main/webapp</directory>
+                            <targetPath>/</targetPath>
+                            <includes>
+                                <include>**/*</include>
+                            </includes>
+                        </resource>
+                    </webResources>
+
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
